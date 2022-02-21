@@ -1,0 +1,17 @@
+kind: Suite
+apiVersion: test.gatekeeper.sh/v1alpha1
+metadata:
+  name: deny-labelsls
+tests:
+- name: aro-deny-control-plane-machines
+  template: ../aro-deny-labels.yaml
+  constraint: aro-machines-deny.yaml
+  cases:
+  - name: workers-allowed
+    object: workers-allowed.yaml
+    assertions:
+    - violations: no
+  - name: control-plane-disallowed
+    object: control-plane-disallowed.yaml
+    assertions:
+    - violations: yes

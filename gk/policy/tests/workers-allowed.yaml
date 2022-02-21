@@ -1,0 +1,13 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  labels:
+    machine.openshift.io/cluster-api-cluster: cluster-4pffb
+    machine.openshift.io/cluster-api-machine-role: worker
+    machine.openshift.io/cluster-api-machine-type: worker
+    machine.openshift.io/cluster-api-machineset: cluster-4pffb-worker-eastus1
+    machine.openshift.io/instance-type: Standard_D4s_v3
+    machine.openshift.io/region: eastus
+    machine.openshift.io/zone: "1"
+  name: cluster-4pffb-worker-eastus1-q4zwn
+  namespace: openshift-machine-api
